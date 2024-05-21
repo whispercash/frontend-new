@@ -39,7 +39,7 @@ const Wallet = ({ wallet }: { wallet: BaseWallet }) => {
     };
 
     return (
-        <div className={`${styles.card} ${styles.shadow}`} style={{ marginBottom: '20px' }} onClick={walletClickHandler}>
+        <div className={`${styles.card} ${styles.shadow} cursor-pointer`} onClick={walletClickHandler}>
             <div className={`${styles.walletheader}`}>
                 <div style={{ margin: 5, display: 'flex', alignItems: 'center' }}>
                     {wallet?.metadata?.iconUrl && <Image width={45} height={45} src={wallet.metadata.iconUrl} alt='wallet icon' />}

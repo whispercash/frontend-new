@@ -11,7 +11,7 @@ const Wallets = () => {
   }
 
   return (
-    <div>
+    <div className='flex flex-col gap-5'>
       {wallets.map((wallet: BaseWallet) => (
         <Wallet key={wallet.metadata.title} wallet={wallet} />
       ))}
