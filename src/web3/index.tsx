@@ -38,7 +38,7 @@ const ConnectContainer = () => {
   let [showWallets, setShowWallets] = useState(false);
   return (
     <PolkadotWalletsContextProvider walletAggregator={walletAggregator}>
-      <div className={`${styles.grid}`}>
+      <div className="">
         {!showWallets && (
           <button
             className={`${styles.btn} ${styles.rounded}`}
@@ -55,7 +55,7 @@ const ConnectContainer = () => {
         <dialog ref={modalRef} className="modal">
           <div className="modal-box" style={{padding: '20px'}}>
             <Wallets />
-            <div className="modal-action">
+            <div className="modal-action" style={{ marginTop: '20px' }}>
               <form method="dialog">
                 {/* if there is a button in form, it will close the modal */}
                 <button className="btn">Close</button>

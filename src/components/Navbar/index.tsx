@@ -32,13 +32,16 @@ export const Navbar = () => {
                     <span>WhisperCash</span>
                 </a>
             </div>
-            <div className="w-1/2">
-                <div className="form-control w-full flex flex-row gap-2">
-                    <input type="text" placeholder="Ask AI" value={chatVal} onChange={(e: any) => setChatVal(e.target.value)} onKeyUp={(e) => { if (e.key === 'Enter') { askAi(); } }} className="input input-bordered w-full" />
-                    <button className="btn btn-success" onClick={() => askAi()}>Ask</button>
-                </div>
+            <div className="form-control w-1/2 flex flex-row gap-2">
+                <input type="text"
+                    placeholder="Ask AI"
+                    value={chatVal}
+                    onChange={(e: any) => setChatVal(e.target.value)}
+                    onKeyUp={(e) => { if (e.key === 'Enter') { askAi(); } }}
+                    className="input input-bordered w-full" />
+                <button className="btn btn-success" onClick={() => askAi()}>Ask</button>
             </div>
-            <div className="gap-2">
+            <div className="gap-2 flex-end">
                 <ConnectContainer />
             </div>
         </div>
