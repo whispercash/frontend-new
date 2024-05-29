@@ -2,11 +2,11 @@ import { ChatBody } from "@/types";
 import { headers } from "next/headers";
 import OpenAI from "openai";
 
-export const openai = new OpenAI({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function getChatResponse(model: string, messages: any) {
+async function getChatResponse(model: string, messages: any) {
   // Uuse OpenRouter object
   const completion = await openai.chat.completions.create({
     messages,
