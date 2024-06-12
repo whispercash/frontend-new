@@ -11,6 +11,7 @@ import { useEffect } from "react";
 export default function Dashboard() {
 
   useEffect(() => {
+    console.log('get program metadata')
     getProgramMetaData();
   }, []);
 
@@ -19,7 +20,7 @@ export default function Dashboard() {
       <Navbar />
       <div className="w-full px-5 flex flex-row gap-5">
         <div className="w-3/4">
-          <CryptoCoinOverviewWidget />
+          {/* <CryptoCoinOverviewWidget /> */}
         </div>
         <div className="w-1/4">
           <Web3Action />
